@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,179 +7,118 @@
 
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button30"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        style="@style/Buttom"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button31"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button26" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_marginTop="50dp">
 
-    <Button
-        android:id="@+id/button32"
+            <Button
+                android:id="@+id/Button1"
+                style="@style/Buttom"
 
-        style="@style/Buttom"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button33"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button31"
-        app:layout_constraintTop_toBottomOf="@+id/button28" />
+                />
 
-    <Button
-        android:id="@+id/button33"
+            <Button
+                android:id="@+id/Button2"
+                style="@style/Buttom" />
 
-        style="@style/Buttom"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button32"
-        app:layout_constraintTop_toBottomOf="@+id/button29" />
+            <Button
+                android:id="@+id/Button3"
+                style="@style/Buttom"
 
-    <Button
-        android:id="@+id/button31"
+                />
 
-        style="@style/Buttom"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button32"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button30"
-        app:layout_constraintTop_toBottomOf="@+id/button27" />
+            <Button
+                android:id="@+id/Button4"
+                style="@style/Buttom" />
+        </LinearLayout>
 
-    <Button
-        android:id="@+id/button26"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
-        style="@style/Buttom"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/button30"
-        app:layout_constraintEnd_toStartOf="@+id/button27"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button22" />
+            <Button
+                android:id="@+id/Button5"
+                style="@style/Buttom"
 
-    <Button
-        android:id="@+id/button28"
+                />
 
-        style="@style/Buttom"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/button32"
-        app:layout_constraintEnd_toStartOf="@+id/button29"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button27"
-        app:layout_constraintTop_toBottomOf="@+id/button24" />
+            <Button
+                android:id="@+id/Button6"
+                style="@style/Buttom" />
 
-    <Button
-        android:id="@+id/button29"
+            <Button
+                android:id="@+id/Button7"
+                style="@style/Buttom"
 
-        style="@style/Buttom"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/button33"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button28"
-        app:layout_constraintTop_toBottomOf="@+id/button25" />
+                />
 
-    <Button
-        android:id="@+id/button27"
+            <Button
+                android:id="@+id/Button8"
+                style="@style/Buttom" />
+        </LinearLayout>
 
-        style="@style/Buttom"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/button31"
-        app:layout_constraintEnd_toStartOf="@+id/button28"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button26"
-        app:layout_constraintTop_toBottomOf="@+id/button23" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/button22"
+            <Button
+                android:id="@+id/Button9"
+                style="@style/Buttom"
 
-        style="@style/Buttom"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/button26"
-        app:layout_constraintEnd_toStartOf="@+id/button23"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button18" />
+                />
 
-    <Button
-        android:id="@+id/button24"
+            <Button
+                android:id="@+id/Button10"
+                style="@style/Buttom" />
 
-        style="@style/Buttom"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/button28"
-        app:layout_constraintEnd_toStartOf="@+id/button25"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button23"
-        app:layout_constraintTop_toBottomOf="@+id/button20" />
+            <Button
+                android:id="@+id/Button11"
+                style="@style/Buttom"
 
-    <Button
-        android:id="@+id/button25"
+                />
 
-        style="@style/Buttom"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/button29"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button24"
-        app:layout_constraintTop_toBottomOf="@+id/button21" />
+            <Button
+                android:id="@+id/Button12"
+                style="@style/Buttom" />
+        </LinearLayout>
 
-    <Button
-        android:id="@+id/button23"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
-        style="@style/Buttom"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/button27"
-        app:layout_constraintEnd_toStartOf="@+id/button24"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button22"
-        app:layout_constraintTop_toBottomOf="@+id/button19" />
+            <Button
+                android:id="@+id/Button13"
+                style="@style/Buttom"
 
-    <Button
-        android:id="@+id/button18"
+                />
 
-        style="@style/Buttom"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/button22"
-        app:layout_constraintEnd_toStartOf="@+id/button19"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <Button
+                android:id="@+id/Button14"
+                style="@style/Buttom" />
 
-    <Button
-        android:id="@+id/button19"
+            <Button
+                android:id="@+id/Button15"
+                style="@style/Buttom"
 
-        style="@style/Buttom"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/button23"
-        app:layout_constraintEnd_toStartOf="@+id/button20"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button18"
-        app:layout_constraintTop_toTopOf="parent" />
+                />
 
-    <Button
-        android:id="@+id/button20"
-
-        style="@style/Buttom"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/button24"
-        app:layout_constraintEnd_toStartOf="@+id/button21"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button19"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button21"
-
-        style="@style/Buttom"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/button25"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button20"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/Button16"
+                style="@style/Buttom" />
+        </LinearLayout>
+    </LinearLayout>
+ </RelativeLayout>
