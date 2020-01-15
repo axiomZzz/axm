@@ -6,11 +6,12 @@ import android.widget.Button;
 public class Game {
     int[] gamePole={1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8};
     private final int ELEMENTSPOLE=16;
-    public int tempId;
-    public String tempNumb;
-    public int tempId2;
-    public String tempNumb2;
-    boolean flag;
+    public int tempIdA;
+    public String tempNumbA;
+    public int tempIdB;
+    public String tempNumbB;
+    int  flagA;
+    int flagB;
 
 
     public void selectNUmber( int idButton){
@@ -36,18 +37,16 @@ public class Game {
 
     }
     public void proverka(int chislo,int idButton){
-        if (tempNumb==null){
-        tempId=idButton;
-        tempNumb=Integer.toString(chislo);
+        if (tempNumbA==null){
+        flagA=chislo;
+        tempIdA=idButton;
+        tempNumbA=Integer.toString(chislo);
         } else{
-            tempId2=idButton;
-            tempNumb2=Integer.toString(chislo);
-            if (tempNumb==tempNumb2){
-                flag=true;
-            } else {
-                flag=false;
-            }
-            tempNumb=null;
+            flagB=chislo;
+            tempIdB=idButton;
+            tempNumbB=Integer.toString(chislo);
+
+            tempNumbA=null;
         }
 
 

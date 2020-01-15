@@ -3,6 +3,7 @@ package io.axm.a2pages;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 
@@ -11,17 +12,18 @@ import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity {
     Game game;
-    Button button;
-    Timer timer=new Timer();
+    Button button1;
+    Button button2;
+    private Handler handler = new Handler();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        game=new Game();
+        game = new Game();
 
-        final int [] numbersId={
+        final int[] numbersId = {
                 R.id.Button1,
                 R.id.Button2,
                 R.id.Button3,
@@ -39,66 +41,46 @@ public class MainActivity extends AppCompatActivity {
                 R.id.Button15,
                 R.id.Button16,
         };
-        View.OnClickListener buttonListener=new View.OnClickListener() {
+        View.OnClickListener buttonListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                    game.selectNUmber(v.getId());
+                game.selectNUmber(v.getId());
 
-                    if (game.tempNumb2 == null) {
+                if (game.tempNumbA != null) {
+                    button1 = findViewById(game.tempIdA);
+                    button1.setText(game.tempNumbA);
+                } else if (game.tempNumbB != null) {
+                    button2 = findViewById(game.tempIdB);
+                    button2.setText(game.tempNumbB);
 
-                        button = findViewById(game.tempId);
-                        button.setText(game.tempNumb);
-                    } else if (game.tempNumb2 != null) {
+                    handler.postDelayed(toasRunnable, 1000);
 
-                        button = findViewById(game.tempId2);
-                        button.setText(game.tempNumb2);
-
-                        if(game.tempNumb==game.tempNumb2){
-                           // game.tempNumb=null;
-
-                        }
-                        else{
-                            button = findViewById(game.tempId);
-                            button.setText("X");
-
-                            game.tempNumb=game.tempNumb2;
-                            game.tempId=game.tempId2;
-
-                        }
-
-
-                        /*timer.schedule(new TimerTask() {
-                            @Override
-                            public void run() {
-                                try {
-                                    if (game.tempNumb != game.tempNumb2) {
-
-
-                                        button = findViewById(game.tempId);
-                                        button.setText("X");
-
-                                        button = findViewById(game.tempId2);
-                                        button.setText("X");
-                                    }
-                                } catch (Exception e){
-
-                                }
-
-                            }
-                        },1000);*/
-
-
-                    }
-
-
+                }
             }
         };
-        for (int i = 0; i <numbersId.length ; i++) {
+        for (int i = 0; i < numbersId.length; i++) {
             findViewById(numbersId[i]).setOnClickListener(buttonListener);
-
         }
-
-
     }
+
+    private Runnable toasRunnable = new Runnable() {
+        @Override
+        public void run() {
+            if (game.flagA!=game.flagB) {
+
+                button1.setText("");
+
+                button2.setText("");
+
+
+            } else {
+
+                 button1.setEnabled(false);
+
+                 button2.setEnabled(false);
+
+            }
+        }
+    };
 }
